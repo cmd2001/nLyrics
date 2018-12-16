@@ -2,13 +2,13 @@
 
 A Simple tool to download lyrics from Netease music
 
-##How to use:
+## How to use:
 
 First, install curl.
 
 Build nLyrics.cpp (or download our release), then execute it and enter your playlist id.
 
-##Features:
+## Features:
 
 Download lyrics for a whole music list from netease cloud music.
 
@@ -16,7 +16,7 @@ Automaticly detect lyric translations and download them (named with _trans suffi
 
 Name the lyrics as [title].lrc, process unusable characters using the way used by the official application.
 
-##Known Bugs:
+## Known Bugs:
 
 On Windows platform, some music name may be displayed incorrcetly in the console, but it doesn't affect the file.
 
