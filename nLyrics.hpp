@@ -8,12 +8,10 @@ private:
 public:
     FileOutput(const string &name) {
         #ifdef _WIN32 // for Windows platfrom.
-            //debug << "This is Windows" << endl;
             wstring_convert<codecvt_utf8_utf16<wchar_t>, wchar_t> cvt;
             wstring name_16 = cvt.from_bytes(name); // conver name to UTF_16.
             file = _wfopen(name_16.c_str(),L"w");
         #else
-            //debug << "This is Linux" << endl;
             file = fopen(name.c_str(),"w");
         #endif
     }
@@ -135,7 +133,6 @@ public:
     inline void getListJson(long long id) {
         static char ss[1010];
         sprintf(ss,"curl -o list.json \"http://music.163.com/api/playlist/detail?id=%lld\" -s", id);
-        debug << ss << endl;
         system(ss);
     }
 };
